@@ -1,5 +1,5 @@
 # IIR-login
-This project is a mock login screen design. See it live at www.carredondo.site
+This project is a mock login page. See it live at www.carredondo.site
 
 Stack
 • HTML
