@@ -44,15 +44,17 @@ $('form').submit(function() {
   // Pseudo-authentication
   var redirect = function() {
     $("p.success").text("Redirecting...");
+    setTimeout(function(){
+      $("p.success").text("");
+      $('#loginModal').modal('hide');
+      $('#content').load('dashboard.html')
+    }, 1000);
   };
 
   var success = function() {
     $(".loading-container").toggle();
     $("p.success").text("Success!");
     setTimeout(redirect,1000);
-    setTimeout(function(){
-      $('#content').load('dashboard.html')}, 100);
-    $('#loginModal').modal('hide');
   };
 
   if (emailTest && passwordTest) {
