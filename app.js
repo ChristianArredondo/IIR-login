@@ -51,7 +51,8 @@ $('form').submit(function() {
     $("p.success").text("Success!");
     setTimeout(redirect,1000);
     setTimeout(function(){
-      window.location.replace("dashboard.html")}, 1500);
+      $('#content').load('dashboard.html')}, 100);
+    $('#loginModal').modal('hide');
   };
 
   if (emailTest && passwordTest) {
@@ -62,6 +63,9 @@ $('form').submit(function() {
 
   return false;
 });
+
+// Load dashboard upon successful login
+  
 
 
 
